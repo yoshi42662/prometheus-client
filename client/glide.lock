@@ -1,0 +1,6 @@
+hash: 3cf9c3c15683254ac5851879e9756d34f6b108ff836a3bf26f969ae6f65cd498
+updated: 2017-10-08T08:59:12.384746935Z
+imports:
+- name: github.com/prometheus/client_golang
+  version: 967789050ba94deca04a5e84cce8ad472ce313c1
+testImports: []

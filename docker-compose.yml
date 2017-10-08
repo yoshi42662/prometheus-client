@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+  server:
+    build: .
+    # volumes:
+      # - 'data:/go:rw'
+      # - '.:/go/src/go-grpc'
+    expose:
+      - 9090
+    ports:
+      - 9090:9090
+  client:
+    build: ./client
+    volumes:
+      - 'data:/go:rw'
+      - './client:/go/src/client'
+    links:
+      - server
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    command: bash -c 'cd /go/src/client && fresh'
+volumes:
+  data:
+    driver: 'local'
