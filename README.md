@@ -2,6 +2,10 @@
 
 Sample prometheus test environment with a number of test clients and grafana(for visualising prometheus metrics)
 
+<img src="https://raw.githubusercontent.com/yoshi42662/prometheus-client/master/grafana-sample.png" >
+
+<img src="https://raw.githubusercontent.com/yoshi42662/prometheus-client/master/prometheus-sample.png" >
+
 ## Documents
 
 - [prometheus.io](https://prometheus.io/)
