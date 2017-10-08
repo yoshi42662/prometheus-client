@@ -1,21 +1,21 @@
 package main
 
 import (
-  "fmt"
-  "net/http"
-  "log"
-  "github.com/prometheus/client_golang/prometheus/promhttp"
+	"fmt"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
+	"log"
+	"net/http"
 )
 
 func mainHandler(w http.ResponseWriter, r *http.Request) {
-  log.Println("Recieved to /")
+	log.Println("Recieved to /")
 
-  fmt.Fprintf(w, "Hello, World")
+	fmt.Fprintf(w, "Hello, World")
 }
 
 func main() {
-  http.HandleFunc("/", mainHandler)
-  http.Handle("/metrics", promhttp.Handler())
+	http.HandleFunc("/", mainHandler)
+	http.Handle("/metrics", promhttp.Handler())
 
-  log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }

@@ -12,6 +12,9 @@ Sample prometheus test environment with a number of test clients and grafana(for
 
 - Prometheus(`http://localhost:9090`)
 - Grafana(`http://localhost:3000`)
+
 You can login grafana as admin.
+
 ID: admin
+
 Pass: admin
