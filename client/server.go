@@ -14,7 +14,8 @@ func mainHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-  http.HandleFunc("/", mainHandlerhandler)
-  http.HandleFunc("/metrics", promhttp.Handler())
-  http.ListenAndServe(":8080", nil)
+  http.HandleFunc("/", mainHandler)
+  http.Handle("/metrics", promhttp.Handler())
+
+  log.Fatal(http.ListenAndServe(":8080", nil))
 }

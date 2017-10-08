@@ -22,4 +22,4 @@ WORKDIR /go/src/client
 RUN go get github.com/pilu/fresh
 
 # Install packages via glide
-# RUN glide install
+RUN glide install
